@@ -1,5 +1,5 @@
 (ns valuehash.specs
-  (:require [clojure.spec :as s]))
+  (:require [clojure.spec.alpha :as s]))
 
 (def byte-array-class (class (byte-array 0)))
 
