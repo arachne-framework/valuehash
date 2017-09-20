@@ -76,8 +76,9 @@ same binary representation.
 
 This means:
 
-- All lists are encoded the same
-- All sets are encoded the same
+- All list types are encoded the same
+- All set types are encoded the same
+- All map types are encoded the same
 - All integer numbers are encoded the same
 - All floating-point numbers are encoded the same
 
