@@ -1,0 +1,10 @@
+{:paths ["src"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.0-alpha4"}
+        org.clojure/tools.logging {:mvn/version  "0.3.1"}}
+ :aliases
+ {:run-tests {:main-opts ["-m" "cognitect.test-runner"]}
+  :test {:extra-paths ["test"]
+         :extra-deps {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner.git"
+                                                 :sha "028a6d41ac9ac5d5c405dfc38e4da6b4cc1255d5"}
+                      criterium/criterium {:mvn/version "0.4.4"}
+                      org.clojure/test.check {:mvn/version "0.9.0"}}}}}
