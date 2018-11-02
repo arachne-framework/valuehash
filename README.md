@@ -1,5 +1,9 @@
 # Valuehash
 
+
+[![CircleCI](https://circleci.com/gh/arachne-framework/valuehash.svg?style=svg)](https://circleci.com/gh/arachne-framework/valuehash)
+
+
 A Clojure library that provides a way to provide higher-bit hashes of arbitrary
 Clojure data structures, which respect Clojure's value semantics. That is, if
 two objects are `clojure.core/=`, they will have the same hash value. To my
