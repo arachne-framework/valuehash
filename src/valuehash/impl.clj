@@ -66,9 +66,9 @@
   clojure.lang.Ratio
   (to-byte-array [this] (long->bytes (Double/doubleToLongBits (double this))))
   clojure.lang.BigInt
-  (to-byte-array [this] (long->bytes (Double/doubleToLongBits (double this))))
+  (to-byte-array [this] (.toByteArray (.toBigInteger this)))
   BigInteger
-  (to-byte-array [this] (long->bytes (Double/doubleToLongBits (double this))))
+  (to-byte-array [this] (.toByteArray this))
   BigDecimal
   (to-byte-array [this] (long->bytes (Double/doubleToLongBits (double this))))
   Boolean
