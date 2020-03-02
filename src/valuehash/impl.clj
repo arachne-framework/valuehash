@@ -1,6 +1,7 @@
 (ns valuehash.impl
   "Simple implementation based on plain byte arrays"
-  (:import [java.util UUID Date]))
+  (:import [java.util UUID Date]
+           [java.math BigDecimal BigInteger]))
 
 (defprotocol CanonicalByteArray
   "An object that can be converted to a canonical byte array, with value
@@ -63,6 +64,12 @@
   Float
   (to-byte-array [this] (long->bytes (Double/doubleToLongBits this)))
   clojure.lang.Ratio
+  (to-byte-array [this] (long->bytes (Double/doubleToLongBits (double this))))
+  clojure.lang.BigInt
+  (to-byte-array [this] (.toByteArray (.toBigInteger this)))
+  BigInteger
+  (to-byte-array [this] (.toByteArray this))
+  BigDecimal
   (to-byte-array [this] (long->bytes (Double/doubleToLongBits (double this))))
   Boolean
   (to-byte-array [this] (byte-array 1 (if this (byte 1) (byte 0))))
