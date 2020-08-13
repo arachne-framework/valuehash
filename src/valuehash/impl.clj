@@ -82,8 +82,8 @@
 
 (defn- map-entry->byte-array
   [map-entry]
-  (join-byte-arrays [(to-byte-array (.getKey map-entry))
-                     (to-byte-array (.getValue map-entry))]))
+  (join-byte-arrays [(to-byte-array (key map-entry))
+                     (to-byte-array (val map-entry))]))
 
 ;; Collections
 (extend-protocol CanonicalByteArray
